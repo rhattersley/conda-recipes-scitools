@@ -1,0 +1,44 @@
+package:
+    name: iris
+    version: "1.7.0"
+
+source:
+    #git_url: git@github.com:SciTools/iris.git
+    #git_tag: v0.11.0
+    git_url: git@github.com:rhattersley/iris.git
+    git_tag: test17b
+
+requirements:
+    build:
+        # (1) Building the pyke rules imports iris.
+        - python
+        - numpy
+        - biggus  # (1)
+        - cartopy  # (1)
+        - netcdf4  # (1)
+        - pyke
+        - scipy  # (1)
+        - setuptools
+        - udunits 2.*  # (1)
+
+    run:
+        - python
+        - numpy
+        - cfchecker
+        - ecmwf_grib
+        - mock
+        - netcdf4
+        - nose
+        - pandas 0.12.*
+        - pep8
+        - pyke
+        - udunits 2.*
+
+test:
+    imports:
+        - iris
+
+about:
+    home: http://scitools.org.uk/iris/
+    license: LGPL
+    summary: A powerful, easy to use, and community-driven Python library for analysing and visualising meteorological and oceanographic data sets.

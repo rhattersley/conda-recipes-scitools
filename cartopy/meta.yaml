@@ -1,0 +1,40 @@
+package:
+    name: cartopy
+    version: "0.11.0"
+
+source:
+    git_url: git@github.com:SciTools/cartopy.git
+    git_tag: v0.11.0
+
+requirements:
+    build:
+        - python
+        - numpy
+        - cython
+        - geos
+        - proj4
+        - six
+
+    run:
+        - python
+        - numpy
+        - geos
+        - imaging  # pillow is broken
+        - matplotlib
+        - mock
+        - nose
+        - proj4
+        - pyshp
+        - scipy
+        - shapely
+        - six
+
+test:
+    imports:
+        - cartopy
+        - cartopy.crs
+
+about:
+    home: http://scitools.org.uk/cartopy/
+    license: LGPL
+    summary: A cartographic python library with matplotlib support.
