@@ -3,8 +3,10 @@ package:
     version: "1.7.1"
 
 source:
-    git_url: git@github.com:SciTools/iris.git
-    git_tag: v1.7.1-rc.1  # Update to 1.7.1 when available
+    #git_url: git@github.com:SciTools/iris.git
+    #git_tag: v1.7.1-rc.1  # Update to 1.7.1 when available
+    fn: COMBO.zip
+    url: https://github.com/rhattersley/iris/archive/COMBO.zip
 
 build:
     number: 0
@@ -25,6 +27,7 @@ requirements:
         - udunits 2*  # (1)
 
     run:
+        # These must allow all the tests to pass.
         - python
         - numpy
         - biggus 0.6*
