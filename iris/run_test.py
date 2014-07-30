@@ -75,4 +75,5 @@ if __name__ == '__main__':
     fetch_data('iris-test-data', '3378fe68c00ca7f31895ab6630a59a39ccef94e3')
     fetch_data('iris-sample-data', '1ed3e26606366717e2053bacc12bf5e8d8fa2704')
     create_site_cfg()
-    exit(run_tests())
+    if not run_tests():
+        exit(1)
