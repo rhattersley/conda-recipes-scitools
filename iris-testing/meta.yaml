@@ -1,0 +1,40 @@
+package:
+    name: iris-testing
+    version: "1.7.1"
+
+source:
+    #git_url: git@github.com:SciTools/iris.git
+    #git_tag: v1.7.1-rc.1  # Update to 1.7.1 when available
+    #fn: COMBO.zip
+    #url: https://github.com/rhattersley/iris/archive/COMBO.zip
+
+build:
+    number: 0
+
+requirements:
+    build:
+
+    run:
+        # These must allow all the tests to pass.
+        - python
+        - numpy
+        - biggus 0.6*
+        - cartopy
+        - cfchecker
+        - ecmwf_grib 1.9.16
+        - libmo_unpack
+        - mock
+        - netcdf4
+        - nose
+        - pep8
+        - pyke
+        - udunits 2*
+
+test:
+    imports:
+        - mock
+
+about:
+    home: http://scitools.org.uk/iris/
+    #license: LGPL
+    summary: The dependencies for Iris which allow the tests to pass.
